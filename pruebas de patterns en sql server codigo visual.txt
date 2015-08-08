@@ -1,0 +1,13 @@
+using System;
+using Microsoft.SqlServer.Server;
+using System.Text.RegularExpressions;
+
+public partial class RegExBase
+{
+    [SqlFunction(IsDeterministic = true, IsPrecise = true)]
+    public static bool RegExMatch(string pattern, string matchString)
+    {
+        Regex r1 = new Regex(pattern.TrimEnd(null));
+        return r1.Match(matchString.TrimEnd(null)).Success;
+    }
+};
