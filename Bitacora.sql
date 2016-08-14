@@ -1,4 +1,4 @@
---prubas en branch 1
+--prubas en branch 1 otra ves
 create table usuario(
   ci integer primary key,
   nombre varchar(50)
